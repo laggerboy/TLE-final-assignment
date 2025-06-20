@@ -1,0 +1,19 @@
+{
+  "name": "my-web-app",           
+  "version": "1.0.0",            
+  "main": "index.js",           
+  "scripts": {
+    "build:tailwind": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch",
+    "start": "npm run build:tailwind"
+  },
+  "keywords": [],               
+  "author": "",                 
+  "license": "ISC",             
+
+  "devDependencies": {          
+    "@popperjs/core": "^2.11.8",
+    "@tailwindcss/cli": "^4.1.10",
+    "bootstrap": "^5.3.7",
+    "tailwindcss": "^4.1.10"
+  }
+}
