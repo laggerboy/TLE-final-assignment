@@ -1,8 +1,1 @@
-@import "bootstrap/dist/css/bootstrap.min.css";
-
-@import "tailwindcss";
-
-* {
-  margin: 0px;
-  padding: 0px;
-}
+@import "tailindcss";
