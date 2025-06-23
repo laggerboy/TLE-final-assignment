@@ -14,7 +14,7 @@
   </head>
   <body>
     <nav
-      class="flex items-center justify-between bg-gray-200 w-full px-10 min-[956px]:px-30 max-[400px]:px-1 shadow-xl"
+      class="fixed flex items-center justify-between bg-gray-200 w-full px-10 min-[956px]:px-30 max-[400px]:px-1 shadow-xl"
     >
       <div>
         <a href="index.html">
@@ -31,7 +31,7 @@
           <a href="index.html" class="cursor-pointer group relative"
             >Home
             <span
-              class="absolute bottom-0 left-1/2 -translate-x-1/2 w-10/12 h-0.5 bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out origin-center"
+              class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-10/12 h-0.5 bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out origin-center"
             ></span
           ></a>
         </li>
@@ -39,7 +39,7 @@
           <a href="shop.html" class="cursor-pointer group relative"
             >Shop
             <span
-              class="absolute bottom-0 left-1/2 -translate-x-1/2 w-10/12 h-0.5 bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out origin-center"
+              class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-10/12 h-0.5 bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out origin-center"
             ></span>
           </a>
         </li>
@@ -47,7 +47,7 @@
           <a href="programmes.html" class="cursor-pointer group relative"
             >Programmes
             <span
-              class="absolute bottom-0 left-1/2 -translate-x-1/2 w-10/12 h-0.5 bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out origin-center"
+              class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-10/12 h-0.5 bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out origin-center"
             ></span
           ></a>
         </li>
@@ -55,7 +55,7 @@
           <a href="about" class="cursor-pointer group relative"
             >About
             <span
-              class="absolute bottom-0 left-1/2 -translate-x-1/2 w-10/12 h-0.5 bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out origin-center"
+              class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-10/12 h-0.5 bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out origin-center"
             ></span>
           </a>
         </li>
@@ -68,7 +68,7 @@
         </button>
         <button
           class="min-[956px]:hidden border-gray-700 p-0.5 cursor-pointer"
-          id="hamMenu"
+          id="ham-menu"
         >
           <img
             src="../material/hamburger-icon.svg"
@@ -78,5 +78,30 @@
         </button>
       </div>
     </nav>
+    <!-- mobile nav -->
+    <div
+      id="mobile-menu"
+      class="max-h-0 overflow-hidden transition-[all] duration-400 ease-in-out origin-top flex flex-col items-center gap-6 bg-gray-200 w-full text-[20px] shadow-md fixed top-[80px] left-0 z-50 min-[956px]:hidden"
+    >
+      <a href="index.html" class="hover:font-bold">Home</a>
+      <a href="shop.html" class="hover:font-bold">Shop</a>
+      <a href="programmes.html" class="hover:font-bold">Programmes</a>
+      <a href="about" class="hover:font-bold">About</a>
+      <a
+        href="login"
+        class="bg-blue-950 text-white px-4 py-2 mb-5 rounded-3xl font-bold hover:bg-gray-50 hover:text-blue-950 transition"
+        >Login</a
+      >
+    </div>
+    <header>
+      <img
+        src="../material/danielslaizans2.jpg"
+        alt="athlete doing L sit"
+        class="min-[956px]:h-screen h-[50vh] object-cover w-full"
+      />
+    </header>
+    <h2 class="text-center text-4xl my-20 px-10 min-[956px]:text-5xl">
+      Express Yourself With The Art of Calisthenics
+    </h2>
   </body>
 </html>
