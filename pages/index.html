@@ -14,7 +14,7 @@
   </head>
   <body>
     <nav
-      class="fixed z-999 flex items-center justify-between bg-gray-200 w-full px-10 min-[956px]:px-30 max-[400px]:px-1 shadow-xl"
+      class="fixed z-998 flex items-center justify-between bg-gray-200 w-full px-10 min-[956px]:px-30 max-[400px]:px-1 shadow-xl"
     >
       <div>
         <a href="index.html">
@@ -62,14 +62,11 @@
       </ul>
       <div class="flex items-center gap-5">
         <button
-          class="min-[956px]:block hidden w-30 h-12 bg-blue-950 text-[20px] font-bold text-gray-200 px-2 py-1 rounded-3xl cursor-pointer hover:bg-gray-50 hover:text-blue-950 transition duration-100"
+          class="min-[956px]:block hidden w-30 h-12 bg-emerald-900 text-[20px] font-bold text-gray-200 px-2 py-1 rounded-3xl cursor-pointer hover:bg-gray-50 hover:text-emerald-900 transition duration-100"
         >
           <a href="login">Login</a>
         </button>
-        <button
-          class="min-[956px]:hidden border-gray-700 p-0.5 cursor-pointer"
-          id="ham-menu"
-        >
+        <button class="min-[956px]:hidden p-0.5 cursor-pointer" id="ham-menu">
           <img
             src="../material/hamburger-icon.svg"
             alt="menu icon"
@@ -81,7 +78,7 @@
     <!-- mobile nav -->
     <div
       id="mobile-menu"
-      class="max-h-0 overflow-hidden transition-[all] duration-400 ease-in-out origin-top flex flex-col items-center gap-6 bg-gray-200 w-full text-[20px] shadow-md fixed top-[80px] left-0 z-50 min-[956px]:hidden"
+      class="max-h-0 overflow-hidden transition-[all] duration-400 ease-in-out origin-top flex flex-col items-center gap-6 bg-gray-200 w-full text-[20px] shadow-md fixed top-[80px] left-0 z-999 min-[956px]:hidden"
     >
       <a href="index.html" class="hover:font-bold">Home</a>
       <a href="shop.html" class="hover:font-bold">Shop</a>
@@ -89,7 +86,7 @@
       <a href="about" class="hover:font-bold">About</a>
       <a
         href="login"
-        class="bg-blue-950 text-white px-4 py-2 mb-5 rounded-3xl font-bold hover:bg-gray-50 hover:text-blue-950 transition"
+        class="bg-emerald-900 text-white px-4 py-2 mb-5 rounded-3xl font-bold hover:bg-gray-50 hover:text-emerald-900 transition"
         >Login</a
       >
     </div>
@@ -176,20 +173,26 @@
           </button>
         </div>
         <!-- Text Section -->
-        <div class="md:w-1/2 text-center md:text-left px-10">
-          <p class="text-lg text-gray-700 min-[956px]:text-2xl">
+        <div class="md:w-1/2 text-center md:text-left px-10 relative">
+          <p class="text-lg text-gray-700 min-[800px]:text-2xl">
             Take your training to the next level with high-quality calisthenics
             gear designed to support your strength, control, and progress.
             Whether you're a beginner or a seasoned athlete, the right equipment
             can unlock new skills, prevent injury, and maximize your performance
             right from home. Invest in your fitness journey today.
           </p>
+          <div
+            class="border-l-2 border-t-2 border-black min-w-30 min-h-30 absolute -top-15 -left-6 hidden min-[956px]:block"
+          ></div>
+          <div
+            class="border-r-2 border-b-2 border-black min-w-30 min-h-30 absolute -bottom-15 -right-6 hidden min-[956px]:block"
+          ></div>
         </div>
       </div>
       <div class="bg-gray-100 m-auto p-10">
         <a href="shop.html">
           <button
-            class="block m-auto mt-5 bg-gray-300 text-[20px] px-8 py-4 rounded-2xl cursor-pointer hover:bg-blue-950 hover:text-white transition-colors duration-200"
+            class="block m-auto mt-5 bg-gray-300 text-[20px] px-8 py-4 rounded-2xl cursor-pointer hover:bg-emerald-900 hover:text-white transition-colors duration-200"
           >
             Discover Our Proucts
           </button>
