@@ -14,7 +14,7 @@
   </head>
   <body>
     <nav
-      class="fixed flex items-center justify-between bg-gray-200 w-full px-10 min-[956px]:px-30 max-[400px]:px-1 shadow-xl"
+      class="fixed z-999 flex items-center justify-between bg-gray-200 w-full px-10 min-[956px]:px-30 max-[400px]:px-1 shadow-xl"
     >
       <div>
         <a href="index.html">
@@ -100,8 +100,146 @@
         class="min-[956px]:h-screen h-[50vh] object-cover w-full"
       />
     </header>
-    <h2 class="text-center text-4xl my-20 px-10 min-[956px]:text-5xl">
+    <h2
+      class="text-center text-4xl font-medium my-20 px-10 min-[956px]:text-5xl"
+    >
       Express Yourself With The Art of Calisthenics
     </h2>
+    <!-- shop  -->
+    <h2 class="bg-gray-100 w-full text-center text-3xl py-15">
+      Enhance Your Experience
+    </h2>
+    <div>
+      <div
+        class="flex flex-col md:flex-row items-center justify-between gap-10 md:px-10 lg:px-20 py-10 bg-gray-100"
+      >
+        <!-- Carousel Section -->
+        <div
+          class="md:w-1/3 relative overflow-hidden h-120 w-full max-w-lg min-w-90"
+        >
+          <!-- Images -->
+          <div
+            class="carousel-images relative h-full rounded-xl overflow-hidden"
+          >
+            <img
+              src="../material/rings.webp"
+              class="absolute top-0 left-0 w-full h-full object-cover opacity-100 transition-opacity duration-700"
+            />
+            <img
+              src="../material/wrist wraps.webp"
+              class="absolute top-0 left-0 w-full h-full object-cover opacity-0 transition-opacity duration-700"
+            />
+            <img
+              src="../material/paralettes.webp"
+              class="absolute top-0 left-0 w-full h-full object-cover opacity-0 transition-opacity duration-700"
+            />
+          </div>
+
+          <!-- Buttons -->
+          <button
+            id="prevBtn"
+            class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-200 bg-opacity-40 text-white py-2 rounded-xl hover:bg-opacity-70"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-6 h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="black"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+          <button
+            id="nextBtn"
+            class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-200 bg-opacity-40 text-white py-2 rounded-full hover:bg-opacity-70"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-6 h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="black"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
+        </div>
+        <!-- Text Section -->
+        <div class="md:w-1/2 text-center md:text-left px-10">
+          <p class="text-lg text-gray-700 min-[956px]:text-2xl">
+            Take your training to the next level with high-quality calisthenics
+            gear designed to support your strength, control, and progress.
+            Whether you're a beginner or a seasoned athlete, the right equipment
+            can unlock new skills, prevent injury, and maximize your performance
+            right from home. Invest in your fitness journey today.
+          </p>
+        </div>
+      </div>
+      <div class="bg-gray-100 m-auto p-10">
+        <a href="shop.html">
+          <button
+            class="block m-auto mt-5 bg-gray-300 text-[20px] px-8 py-4 rounded-2xl cursor-pointer hover:bg-blue-950 hover:text-white transition-colors duration-200"
+          >
+            Discover Our Proucts
+          </button>
+        </a>
+      </div>
+    </div>
+
+    <!-- benefits -->
+    <section class="bg-white py-12 px-6 md:px-20 md:py-20">
+      <h2 class="text-3xl font-bold text-center mb-10">
+        Why Choose Our Calisthenics Gear?
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+        <!-- Feature 1 -->
+        <div class="flex flex-col items-center">
+          <div class="bg-gray-200 p-4 rounded-full mb-4">
+            <img src="../material/biceps-flexed.svg" alt="biceps flexed" />
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Built for Strength</h3>
+          <p class="text-gray-600">
+            Heavy-duty materials ensure stability and support for all levels of
+            bodyweight training.
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="flex flex-col items-center">
+          <div class="bg-blue-950 p-4 rounded-full mb-4">
+            <img src="../material/house.svg" alt="" />
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Progress at Home</h3>
+          <p class="text-gray-600">
+            Perfect for home gyms train efficiently without needing expensive
+            memberships or bulky machines.
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="flex flex-col items-center">
+          <div class="bg-gray-200 p-4 rounded-full mb-4">
+            <img src="../material/person-standing.svg" alt="stick man figure" />
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Train Anywhere</h3>
+          <p class="text-gray-600">
+            Lightweight and portable gear means you can work out in the park, at
+            home, or while traveling.
+          </p>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
