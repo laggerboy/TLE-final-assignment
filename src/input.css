@@ -9,3 +9,13 @@ h5,
 h6 {
   cursor: default;
 }
+
+button {
+  cursor: pointer;
+}
+
+@layer components {
+  .responsive-padding {
+    @apply px-6 md:px-20 xl:px-48;
+  }
+}
