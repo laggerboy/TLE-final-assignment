@@ -337,12 +337,6 @@
   .aspect-\[3\/4\] {
     aspect-ratio: 3/4;
   }
-  .aspect-\[3\/5\] {
-    aspect-ratio: 3/5;
-  }
-  .aspect-\[4\/5\] {
-    aspect-ratio: 4/5;
-  }
   .h-0 {
     height: calc(var(--spacing) * 0);
   }
@@ -403,6 +397,15 @@
   .w-26 {
     width: calc(var(--spacing) * 26);
   }
+  .w-30 {
+    width: calc(var(--spacing) * 30);
+  }
+  .w-35 {
+    width: calc(var(--spacing) * 35);
+  }
+  .w-40 {
+    width: calc(var(--spacing) * 40);
+  }
   .w-80 {
     width: calc(var(--spacing) * 80);
   }
@@ -411,6 +414,9 @@
   }
   .w-full {
     width: 100%;
+  }
+  .max-w-120 {
+    max-width: calc(var(--spacing) * 120);
   }
   .max-w-lg {
     max-width: var(--container-lg);
@@ -483,6 +489,9 @@
   }
   .resize {
     resize: both;
+  }
+  .auto-rows-auto {
+    grid-auto-rows: auto;
   }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -819,10 +828,17 @@
     --tw-ease: var(--ease-in-out);
     transition-timing-function: var(--ease-in-out);
   }
-  .group-hover\:flex {
+  .group-hover\:block {
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
-        display: flex;
+        display: block;
+      }
+    }
+  }
+  .group-hover\:hidden {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        display: none;
       }
     }
   }
@@ -848,13 +864,6 @@
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
         opacity: 40%;
-      }
-    }
-  }
-  .group-hover\:opacity-100 {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        opacity: 100%;
       }
     }
   }
@@ -892,25 +901,11 @@
       }
     }
   }
-  .hover\:bg-white {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-white);
-      }
-    }
-  }
   .hover\:font-bold {
     &:hover {
       @media (hover: hover) {
         --tw-font-weight: var(--font-weight-bold);
         font-weight: var(--font-weight-bold);
-      }
-    }
-  }
-  .hover\:text-blue-950 {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-blue-950);
       }
     }
   }
