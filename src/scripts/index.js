@@ -30,3 +30,28 @@ nextBtn.addEventListener("click", () => {
   current = (current + 1) % images.length;
   showSlide(current);
 });
+
+// carousel for training programs
+const slides = document.querySelectorAll("#carouselSlides div");
+const indicators = [
+  document.getElementById("dot1"),
+  document.getElementById("dot2"),
+];
+let index = 0;
+
+function updateCarousel(i) {
+  slides.forEach((slide) => {
+    slide.classList.toggle("opacity-0");
+    slide.classList.toggle("opacity-100");
+  });
+
+  indicators.forEach((dot, idx) => {
+    dot.classList.toggle("bg-gray-800", idx === i);
+    dot.classList.toggle("bg-gray-400", idx !== i);
+  });
+}
+
+setInterval(() => {
+  index = (index + 1) % 2;
+  updateCarousel(index);
+}, 3000);
