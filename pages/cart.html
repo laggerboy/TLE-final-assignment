@@ -14,7 +14,7 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="../src/output.css" />
-    <script src="../src/scripts/shop.js" defer></script>
+    <script src="../src/scripts/cart.js" defer></script>
     <title>Kallos Sthenos</title>
   </head>
   <body>
@@ -103,17 +103,12 @@
     <div
       class="w-full max-w-4xl bg-white rounded-xl shadow-lg responsive-padding m-auto"
     >
-      <div id="cart-items" class="space-y-4">
-        <!-- Cart items will be dynamically injected here -->
-      </div>
+      <div
+        id="cart-container"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4"
+      ></div>
 
       <div class="mt-6 flex flex-col justify-between items-center">
-        <button
-          id="clear-cart"
-          class="bg-red-500 text-white px-5 py-2 rounded-lg hover:bg-red-600 transition"
-        >
-          Clear Cart
-        </button>
         <p id="cart-empty" class="text-gray-500 italic hidden">
           Your cart is empty.
         </p>
