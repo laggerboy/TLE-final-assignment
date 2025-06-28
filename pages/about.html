@@ -14,7 +14,7 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="../src/output.css" />
-    <script src="../src/scripts/cart.js" defer></script>
+    <script src="../src/scripts/index.js" defer></script>
     <title>Kallos Sthenos</title>
   </head>
   <body>
@@ -95,25 +95,98 @@
       <a href="about.html" class="hover:font-bold mb-5">About</a>
     </div>
 
-    <h2
-      class="pt-40 pb-10 text-center text-3xl responsive-padding text-blue-900 font-bold"
-    >
-      Your Cart
-    </h2>
-    <div
-      class="w-full max-w-4xl bg-white rounded-xl shadow-lg responsive-padding m-auto"
-    >
-      <div
-        id="cart-container"
-        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4 min-h-60 shadow-2xl rounded-2xl"
-      ></div>
+    <!-- Container -->
+    <div class="pt-36 responsive-padding">
+      <!-- Title -->
+      <h1 class="text-4xl text-center font-bold text-blue-900 mb-8 pb-2">
+        About Me
+      </h1>
 
-      <div class="mt-6 flex flex-col justify-between items-center">
-        <p id="cart-empty" class="text-gray-500 italic hidden">
-          Your cart is empty.
+      <!-- Section: My Story -->
+      <section class="mb-12">
+        <h2 class="text-2xl text-blue-900 text-center font-semibold mb-4 py-10">
+          My Story
+        </h2>
+        <p class="mb-4">
+          Hey! I’m <strong>Alex</strong>, the founder of
+          <strong>Kallos Sthenos</strong>. What started as a few pull-ups in my
+          backyard became a mission to help others unlock strength and mobility
+          without any expensive gym gear.
         </p>
-      </div>
+        <p>
+          After recovering from an injury that sidelined me from weightlifting,
+          I turned to bodyweight exercises. Over time, I rebuilt not only my
+          body—but my confidence and discipline. Calisthenics gave me freedom.
+          Now, I help others discover the same.
+        </p>
+      </section>
+
+      <!-- Section: Mission -->
+      <section class="mb-12">
+        <h2 class="text-2xl text-blue-900 text-center font-semibold mb-4 py-10">
+          My Mission
+        </h2>
+        <p>
+          I believe anyone can master their body. My goal is to provide clear,
+          achievable steps that make bodyweight fitness accessible for
+          everyone—whether you're a total beginner or chasing advanced skills.
+        </p>
+      </section>
+
+      <!-- Section: What You’ll Find -->
+      <section class="mb-12">
+        <h2 class="text-2xl text-blue-900 text-center font-semibold mb-4 py-10">
+          What You’ll Find Here
+        </h2>
+        <ul class="list-disc list-inside space-y-2">
+          <li>
+            <strong>Step-by-step tutorials:</strong> From push-ups to
+            muscle-ups.
+          </li>
+          <li>
+            <strong>Programs:</strong> Structured routines for all levels.
+          </li>
+          <li>
+            <strong>Mobility & recovery:</strong> Stay injury-free and fluid.
+          </li>
+          <li>
+            <strong>Community & coaching:</strong> Connect, share, and grow.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Section: Who This Is For -->
+      <section class="mb-12">
+        <h2 class="text-2xl text-blue-900 text-center font-semibold mb-4 py-10">
+          Who This Is For
+        </h2>
+        <p>
+          Whether you're new to fitness or looking to master skills like the
+          front lever or planche, this space is for you. No fancy gym. No
+          machines. Just your body and the will to train smart.
+        </p>
+      </section>
+
+      <!-- Section: Call to Action -->
+      <section class="text-center my-16">
+        <p class="mb-6 text-lg">
+          Ready to take control of your fitness journey?
+        </p>
+        <a
+          href="programmes.html"
+          class="bg-emerald-700 hover:text-white text-black font-bold py-3 px-6 rounded-lg transition"
+        >
+          Start Training
+        </a>
+        <a
+          href="/contact.html"
+          class="ml-4 border border-emerald-900 text-blac hover:bg-blue-900 hover:text-white font-bold py-3 px-6 rounded-lg transition"
+        >
+          Contact Me
+        </a>
+      </section>
     </div>
+
     <footer class="bg-slate-500 text-gray-100 py-4 px-6 md:px-20 xl:px-46">
       <div
         class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left py-16"
