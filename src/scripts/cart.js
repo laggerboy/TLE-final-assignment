@@ -35,14 +35,16 @@ function renderCartItems() {
       activeCart.splice(index, 1); // Remove from array
       localStorage.setItem("Cart", JSON.stringify(activeCart)); // Update localStorage
       renderCartItems(); // Re-render
+      findSubtotal(); // Re-calc price
+      renderSub(); // Re-render subtotal
     });
 
     cartContainer.appendChild(card);
-    empty();
+    checkEmpty();
   });
 }
 
-function empty() {
+function checkEmpty() {
   document.addEventListener("click", function () {
     if (cartContainer.innerHTML === "") fillerText.classList.remove("hidden");
     else fillerText.classList.add("hidden");
@@ -50,9 +52,43 @@ function empty() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+  findSubtotal();
+
+  renderSub();
+
+  checkEmpty();
+
+  renderCartItems();
+
   if (cartContainer.innerHTML === "") fillerText.classList.remove("hidden");
 });
 
-empty();
+let priceArray = [];
 
-renderCartItems();
+function findPrices() {
+  let prices = [];
+  for (let i = 0; i < activeCart.length; i++) {
+    prices.push(activeCart[i].price);
+  }
+  let trimmedPrices = prices.map((price) => price.replace("$", ""));
+  priceArray = trimmedPrices;
+}
+
+let subTotal = 0;
+
+function findSubtotal() {
+  findPrices();
+  let temp = 0;
+  for (let i = 0; i < priceArray.length; i++) {
+    temp += parseFloat(priceArray[i]);
+    temp = Math.ceil(temp * 100) / 100;
+
+    // console.log(`${subTotal}` + "   " + `${priceArray[i]}`);
+  }
+
+  subTotal = temp;
+}
+
+function renderSub() {
+  document.querySelector(".Subtotal").textContent = `Subtotal: $${subTotal}`;
+}

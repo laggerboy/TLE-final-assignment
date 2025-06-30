@@ -45,18 +45,9 @@ const simplifiedItems = items.map((item) => {
     imgSrc: img?.src || "",
     title: h2?.textContent.trim() || "",
     price: price?.textContent.trim() || "",
+    discount: 0,
   };
 });
-
-// buttons.forEach((button) => {
-//   button.addEventListener("click", function () {
-//     let index = buttons.indexOf(button);
-//     if (localStorage.getItem("Cart")) cart.push(localStorage.getItem("Cart"));
-//     cart.push(simplifiedItems[index]);
-//     // localStorage.removeItem("Cart");
-//     localStorage.setItem("Cart", JSON.stringify(cart));
-//   });
-// });
 
 buttons.forEach((button) => {
   button.addEventListener("click", function () {

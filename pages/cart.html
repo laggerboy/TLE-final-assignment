@@ -100,18 +100,25 @@
     >
       Your Cart
     </h2>
-    <div
-      class="w-full max-w-4xl bg-white rounded-xl shadow-lg responsive-padding m-auto"
-    >
-      <div
-        id="cart-container"
-        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4 min-h-60 shadow-2xl rounded-2xl"
-      ></div>
-
-      <div class="mt-6 flex flex-col justify-between items-center">
-        <p id="cart-empty" class="text-gray-500 italic hidden">
-          Your cart is empty.
-        </p>
+    <div class="responsive-padding">
+      <div class="bg-white rounded-xl shadow-xl mb-20 m-auto">
+        <div
+          id="cart-container"
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4 min-h-60 rounded-2xl"
+        ></div>
+        <div class="mt-6 flex flex-col justify-between items-center">
+          <p id="cart-empty" class="text-gray-500 italic hidden">
+            Your cart is empty.
+          </p>
+          <p class="Subtotal text-green-700 font-medium text-xl my-3">
+            Subtotal: 0
+          </p>
+          <button
+            class="bg-green-800 hover:bg-white border-green-800 border-1 text-white hover:text-green-800 duration-150 text-xl font-bold rounded-2xl h-fit w-fit py-2 px-5 my-3"
+          >
+            Check Out
+          </button>
+        </div>
       </div>
     </div>
     <footer class="bg-slate-500 text-gray-100 py-4 px-6 md:px-20 xl:px-46">
