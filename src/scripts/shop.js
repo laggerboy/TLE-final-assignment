@@ -40,26 +40,94 @@ const simplifiedItems = items.map((item) => {
   const img = item.querySelector("img");
   const h2 = item.querySelector("h2");
   const price = item.querySelector("p.font-bold");
+  const desc = item.querySelector(".Desc");
 
   return {
     imgSrc: img?.src || "",
     title: h2?.textContent.trim() || "",
     price: price?.textContent.trim() || "",
     discount: 0,
+    desc: desc?.textContent.trim() || "",
   };
 });
 
+// buttons.forEach((button) => {
+//   button.addEventListener("click", function () {
+//     const index = buttons.indexOf(button);
+
+//     // Get existing cart or initialize as empty array
+//     let cart = JSON.parse(localStorage.getItem("Cart")) || [];
+
+//     // Push the selected item
+//     cart.push(simplifiedItems[index]);
+
+//     // Save back to localStorage
+//     localStorage.setItem("Cart", JSON.stringify(cart));
+//   });
+// });
+
+// testing view item button instead of add to cart button
 buttons.forEach((button) => {
   button.addEventListener("click", function () {
     const index = buttons.indexOf(button);
+    const preview = document.createElement("div");
+    preview.innerHTML = `
+    <div
+      class="fixed inset-0 z-50 bg-gray-800/50 h-full flex items-center justify-center overflow-y-scroll responsive-padding"
+    >
+      <button
+        class="w-10 h-10 text-3xl text-center rounded-full bg-red-700 text-white hover:bg-red-600 fixed top-20 right-10"
+        id="close-view"
+      >
+        &times;
+      </button>
+      <div class="bg-white p-6 rounded mt-30 md:mt-100 mb-10">
+        <div>
+          <img
+            src="${simplifiedItems[index].imgSrc}"
+            alt="item image"
+            class = "max-h-200 object-cover"
+          />
 
-    // Get existing cart or initialize as empty array
-    let cart = JSON.parse(localStorage.getItem("Cart")) || [];
+          <h2 class="text-xl font-semibold text-center text-black my-4">
+           ${simplifiedItems[index].title}
+          </h2>
+          <p class="Desc text-black text-lg text-center">
+            ${simplifiedItems[index].desc}
+          </p>
+        </div>
 
-    // Push the selected item
-    cart.push(simplifiedItems[index]);
+        <div>
+          <p class="text-black font-bold mt-4 text-center">${simplifiedItems[index].price}</p>
+          <button
+            class="flex items-center justify-center gap-1 m-auto my-2 border-1 border-blue-950 bg-blue-950 text-white w-40 h-10 rounded-3xl hover:bg-white hover:text-blue-950 duration-100"
+            id="add"
+          >
+            add to cart
+          </button>
+        </div>
+      </div>
+    </div>
+    `;
+    document.body.appendChild(preview);
 
-    // Save back to localStorage
-    localStorage.setItem("Cart", JSON.stringify(cart));
+    document.querySelector("#add").addEventListener("click", function () {
+      const index = buttons.indexOf(button);
+
+      // Get existing cart or initialize as empty array
+      let cart = JSON.parse(localStorage.getItem("Cart")) || [];
+
+      // Push the selected item
+      cart.push(simplifiedItems[index]);
+
+      // Save back to localStorage
+      localStorage.setItem("Cart", JSON.stringify(cart));
+    });
+
+    document
+      .querySelector("#close-view")
+      .addEventListener("click", function () {
+        preview.remove();
+      });
   });
 });
