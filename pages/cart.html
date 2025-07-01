@@ -26,7 +26,7 @@
           <img
             src="../material/man-doing-human-flag-silhouette-by-Vexels.svg"
             alt=""
-            class="min-w-24 hover:scale-110 duration-100"
+            class="min-w-15 hover:scale-110 duration-100"
           />
         </a>
       </div>
@@ -100,13 +100,17 @@
     >
       Your Cart
     </h2>
-    <div class="responsive-padding">
-      <div class="bg-white rounded-xl shadow-xl mb-20 m-auto">
+    <div class="responsive-padding relative">
+      <div
+        class="bg-white rounded-xl shadow-xl mb-20 m-auto flex flex-wrap justify-between items-start gap-6"
+      >
         <div
           id="cart-container"
-          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4 min-h-60 rounded-2xl"
+          class="justify-center flex flex-col gap-4 p-4 min-h-60 rounded-2xl grow-3"
         ></div>
-        <div class="mt-6 flex flex-col justify-between items-center">
+        <div
+          class="flex flex-col justify-between items-center grow-1 px-10 sticky top-40"
+        >
           <p id="cart-empty" class="text-gray-500 italic hidden">
             Your cart is empty.
           </p>

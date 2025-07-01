@@ -21,10 +21,10 @@ function renderCartItems() {
   activeCart.forEach((item, index) => {
     const card = document.createElement("div");
     card.className =
-      "bg-white shadow-md rounded-2xl p-4 flex flex-col items-center space-y-3";
+      "bg-white shadow-md rounded-2xl p-4 flex flex-wrap justify-evenly items-center space-y-3 w-full mx-auto";
 
     card.innerHTML = `
-      <img src="${item.imgSrc}" alt="${item.title}" class=" h-full object-cover rounded-md">
+      <img src="${item.imgSrc}" alt="${item.title}" class=" h-30 w-24 object-cover rounded-md">
       <h2 class="text-lg font-semibold">${item.title}</h2>
       <p class="text-blue-600 font-bold">${item.price}</p>
       <button class="remove-btn font-bold bg-amber-800 text-white px-4 py-2 rounded-xl hover:bg-red-600 transition">Remove</button>
