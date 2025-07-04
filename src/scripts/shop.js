@@ -76,7 +76,7 @@ buttons.forEach((button) => {
       class="fixed inset-0 z-50 bg-gray-800/50 h-full flex items-center justify-center overflow-y-scroll responsive-padding"
     >
       <button
-        class="w-10 h-10 text-3xl text-center rounded-full bg-red-700 text-white hover:bg-red-600 fixed top-20 right-10"
+        class="w-10 h-10 text-3xl text-center rounded-full bg-red-700 text-white hover:bg-red-600 fixed top-[10%] right-[5%]"
         id="close-view"
       >
         &times;
@@ -99,6 +99,17 @@ buttons.forEach((button) => {
 
         <div>
           <p class="text-black font-bold mt-4 text-center">${simplifiedItems[index].price}</p>
+        <div class="flex justify-center my-4">
+         <input
+            type="number"
+            min="1"
+            value="1"
+            class="w-20 h-10 text-center text-blue-950 border-2 border-blue-950 rounded-3xl focus:outline-none focus:ring-2 focus:ring-blue-700 placeholder-gray-400"
+            id="item-quantity"
+            placeholder="Qty"
+          />
+          </div>
+
           <button
             class="flex items-center justify-center gap-1 m-auto my-2 border-1 border-blue-950 bg-blue-950 text-white w-40 h-10 rounded-3xl hover:bg-white hover:text-blue-950 duration-100"
             id="add"
@@ -118,7 +129,9 @@ buttons.forEach((button) => {
       let cart = JSON.parse(localStorage.getItem("Cart")) || [];
 
       // Push the selected item
-      cart.push(simplifiedItems[index]);
+      for (let i = 0; i < document.getElementById("item-quantity").value; i++) {
+        cart.push(simplifiedItems[index]);
+      }
 
       // Save back to localStorage
       localStorage.setItem("Cart", JSON.stringify(cart));
