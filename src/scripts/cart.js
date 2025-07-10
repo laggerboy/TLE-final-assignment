@@ -21,13 +21,15 @@ function renderCartItems() {
   activeCart.forEach((item, index) => {
     const card = document.createElement("div");
     card.className =
-      "bg-white shadow-md rounded-2xl p-4 flex flex-wrap justify-evenly items-center space-y-3 w-full mx-auto";
+      "bg-white shadow-md rounded-2xl p-4 grid grid-cols-1 min-[456px]:grid-cols-4 justify-evenly items-center space-y-3 w-full mx-auto";
 
     card.innerHTML = `
-      <img src="${item.imgSrc}" alt="${item.title}" class=" h-30 w-24 object-cover rounded-md">
-      <h2 class="text-lg font-semibold">${item.title}</h2>
-      <p class="text-blue-600 font-bold">${item.price}</p>
-      <button class="remove-btn font-bold bg-amber-800 text-white px-4 py-2 rounded-xl hover:bg-red-600 transition">Remove</button>
+    <div class="grid grid-cols-1 min-[456px]:grid-cols-3 items-center gap-6 col-span-3">
+      <img src="${item.img}" alt="${item.name}" class=" h-30 w-24 object-cover rounded-md justify-self-center">
+      <h2 class="text-lg font-semibold text-center">${item.name}</h2>
+      <p class="text-blue-600 font-bold justify-self-center">${item.price}</p>
+    </div>
+      <button class="remove-btn font-bold bg-amber-800 text-white px-4 py-2 rounded-xl hover:bg-red-600 transition justify-self-center">Remove</button>
     `;
 
     // Remove button logic
@@ -66,12 +68,9 @@ document.addEventListener("DOMContentLoaded", function () {
 let priceArray = [];
 
 function findPrices() {
-  let prices = [];
   for (let i = 0; i < activeCart.length; i++) {
-    prices.push(activeCart[i].price);
+    priceArray.push(activeCart[i].price);
   }
-  let trimmedPrices = prices.map((price) => price.replace("$", ""));
-  priceArray = trimmedPrices;
 }
 
 let subTotal = 0;
@@ -82,8 +81,6 @@ function findSubtotal() {
   for (let i = 0; i < priceArray.length; i++) {
     temp += parseFloat(priceArray[i]);
     temp = Math.ceil(temp * 100) / 100;
-
-    // console.log(`${subTotal}` + "   " + `${priceArray[i]}`);
   }
 
   subTotal = temp;

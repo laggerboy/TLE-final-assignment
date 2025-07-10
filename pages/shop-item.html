@@ -14,7 +14,7 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="../src/output.css" />
-    <script src="../src/scripts/cart.js" defer></script>
+    <script src="../src/scripts/shop-item.js" defer></script>
     <title>Kallos Sthenos</title>
   </head>
   <body>
@@ -95,84 +95,81 @@
       <a href="about.html" class="hover:font-bold mb-5">About</a>
     </div>
 
-    <h2
-      class="pt-40 pb-10 text-center text-3xl responsive-padding text-blue-900 font-bold"
+    <div
+      class="responsive-padding Container mx-auto py-40 w-full grid grid-cols-1 md:grid-cols-2 gap-6"
     >
-      Your Cart
-    </h2>
-    <div class="responsive-padding relative">
-      <div
-        class="bg-white rounded-xl shadow-xl mb-20 m-auto grid grid-cols-1 lg:grid-cols-3 justify-between items-start"
-      >
-        <div
-          id="cart-container"
-          class="justify-center flex flex-col gap-4 p-4 min-h-60 rounded-2xl grow-3 col-span-2"
-        ></div>
-        <div
-          class="flex flex-col justify-between items-center grow-1 px-10 sticky top-40"
-        >
-          <p id="cart-empty" class="text-gray-500 italic hidden">
-            Your cart is empty.
+      <!-- Image Section -->
+      <div class="w-fit mx-auto">
+        <img
+          src="../material/saru-shirt-beige-back-dynamic-view_700x.webp"
+          alt="Item Name"
+          class="max-h-180 rounded-2xl shadow-lg object-cover"
+          id="img"
+        />
+      </div>
+
+      <!-- Details Section -->
+      <div class="flex flex-col justify-between">
+        <div>
+          <!-- Item Name -->
+          <h1 class="text-3xl font-bold mb-2" id="name">Saru Beige Shirt</h1>
+
+          <!-- Price -->
+          <p class="text-2xl text-green-600 font-semibold mb-4" id="price">
+            $24.99
           </p>
-          <p
-            class="Subtotal text-green-700 font-medium text-xl my-3 text-center"
-          >
-            Subtotal: 0
+
+          <!-- Description -->
+          <p class="text-gray-600 mb-6 text-lg" id="desc">
+            High quality cotton T-shirt and shorts designed with beauty and
+            comfort in mind
           </p>
+
+          <!-- Sizes -->
+          <div class="mb-6">
+            <h2 class="text-lg font-medium mb-2">Available Sizes</h2>
+            <div class="flex gap-3" id="size-options">
+              <button
+                class="size-btn border px-4 py-2 rounded-lg hover:bg-gray-100"
+              >
+                S
+              </button>
+              <button
+                class="size-btn border px-4 py-2 rounded-lg hover:bg-gray-100"
+              >
+                M
+              </button>
+              <button
+                class="size-btn border px-4 py-2 rounded-lg hover:bg-gray-100"
+              >
+                L
+              </button>
+              <button
+                class="size-btn border px-4 py-2 rounded-lg hover:bg-gray-100"
+              >
+                XL
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- quantity selector -->
+        <div class="flex justify-end gap-2">
+          <!-- Add to Cart Button -->
           <button
-            class="bg-green-800 hover:bg-white border-green-800 border-1 text-white hover:text-green-800 duration-150 text-xl font-bold rounded-2xl h-fit w-fit py-2 px-5 my-3"
+            class="w-5/6 text-xl font-medium bg-amber-600 text-white py-3 px-6 rounded-[12px] hover:bg-amber-700 transition"
+            id="add"
           >
-            Check Out
+            Add to Cart
           </button>
+          <input
+            type="number"
+            min="1"
+            value="1"
+            class="w-1/6 h-15 bg-gray-100 border-2 border-gray-400 p-2 rounded-[12px] text-center"
+            id="qty"
+          />
         </div>
       </div>
     </div>
-    <footer class="bg-slate-500 text-gray-100 py-4 px-6 md:px-20 xl:px-46">
-      <div
-        class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left py-16"
-      >
-        <div class="px-10">
-          <h3 class="text-xl font-bold mb-4">Kallos Sthenos</h3>
-          <p class="text-white">
-            Gear up. Train hard. Stay consistent. We're building a stronger
-            world one body at a time.
-          </p>
-        </div>
-        <div>
-          <h4 class="font-semibold mb-3">Quick Links</h4>
-          <ul class="space-y-2">
-            <li><a href="index.html" class="hover:underline">Home</a></li>
-            <li><a href="pages/shop.html" class="hover:underline">Shop</a></li>
-            <li>
-              <a href="pages/programmes.html" class="hover:underline"
-                >Programs</a
-              >
-            </li>
-            <li>
-              <a href="pages/about.html" class="hover:underline">About</a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="font-semibold mb-3">Follow Us</h4>
-          <div class="flex justify-center items-center md:justify-start gap-6">
-            <a href="#" aria-label="Instagram"
-              ><img src="../material/instagram.svg" alt="Instagram logo"
-            /></a>
-            <a href="#" aria-label="YouTube"
-              ><img src="../material/youtube.svg" alt="YouTube loog"
-            /></a>
-            <a href="#" aria-label="Twitter"
-              ><img src="../material/twitter-x.svg" alt="X logo"
-            /></a>
-          </div>
-        </div>
-      </div>
-      <p
-        class="text-center text-white text-sm mt-10 border-t border-white pt-6"
-      >
-        © 2025 Kallos Sthenos. All rights reserved.
-      </p>
-    </footer>
   </body>
 </html>
