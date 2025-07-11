@@ -65,18 +65,17 @@ document.addEventListener("DOMContentLoaded", function () {
   if (cartContainer.innerHTML === "") fillerText.classList.remove("hidden");
 });
 
+// function findPrices() {}
 let priceArray = [];
-
-function findPrices() {
-  for (let i = 0; i < activeCart.length; i++) {
-    priceArray.push(activeCart[i].price);
-  }
-}
-
 let subTotal = 0;
 
 function findSubtotal() {
-  findPrices();
+  //collect all prices
+  priceArray = [];
+  for (let i = 0; i < activeCart.length; i++) {
+    priceArray.push(activeCart[i].price);
+  }
+
   let temp = 0;
   for (let i = 0; i < priceArray.length; i++) {
     temp += parseFloat(priceArray[i]);
